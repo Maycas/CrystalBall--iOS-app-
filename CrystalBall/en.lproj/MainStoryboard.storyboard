@@ -12,12 +12,13 @@
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="It is decidedly so" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="bbg-ip-V6q">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="It is decidedly so" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="239" translatesAutoresizingMaskIntoConstraints="NO" id="bbg-ip-V6q">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="57" id="aYi-CV-2bB"/>
+                                    <constraint firstAttribute="width" constant="239" id="Lne-vJ-VRI"/>
+                                    <constraint firstAttribute="height" constant="96" id="oqm-jv-5Zz"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
-                                <color key="textColor" red="0.50196081399917603" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BrY-r1-RXA">
@@ -39,9 +40,8 @@
                             <constraint firstAttribute="trailing" secondItem="BrY-r1-RXA" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Bhe-CT-EWR"/>
                             <constraint firstItem="BrY-r1-RXA" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="F21-4s-6pg"/>
                             <constraint firstAttribute="bottom" secondItem="BrY-r1-RXA" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="ais-4k-d3p"/>
-                            <constraint firstItem="bbg-ip-V6q" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="krP-TU-j7j"/>
-                            <constraint firstAttribute="trailing" secondItem="bbg-ip-V6q" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="o85-zB-XDX"/>
-                            <constraint firstItem="bbg-ip-V6q" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" type="default" id="xGU-kK-aRg"/>
+                            <constraint firstItem="bbg-ip-V6q" firstAttribute="top" secondItem="3" secondAttribute="top" constant="196" id="l1C-7N-nlg"/>
+                            <constraint firstItem="bbg-ip-V6q" firstAttribute="centerX" secondItem="BrY-r1-RXA" secondAttribute="centerX" type="default" id="zDw-j3-G8K"/>
                         </constraints>
                     </view>
                     <connections>
@@ -52,6 +52,18 @@
             </objects>
         </scene>
     </scenes>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="buttonPressed:" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="predictionLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
