@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4959515517CEC26B00CC072C /* buttonBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 4959515417CEC26B00CC072C /* buttonBackground.png */; };
+		4959515717CEC29100CC072C /* buttonBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4959515617CEC29100CC072C /* buttonBackground@2x.png */; };
 		49B9CC9C17CD76DA0055845B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49B9CC9B17CD76DA0055845B /* UIKit.framework */; };
 		49B9CC9E17CD76DA0055845B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49B9CC9D17CD76DA0055845B /* Foundation.framework */; };
 		49B9CCA017CD76DA0055845B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49B9CC9F17CD76DA0055845B /* CoreGraphics.framework */; };
@@ -27,6 +29,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4959515417CEC26B00CC072C /* buttonBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buttonBackground.png; sourceTree = "<group>"; };
+		4959515617CEC29100CC072C /* buttonBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "buttonBackground@2x.png"; sourceTree = "<group>"; };
 		49B9CC9817CD76DA0055845B /* CrystalBall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrystalBall.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49B9CC9B17CD76DA0055845B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		49B9CC9D17CD76DA0055845B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -123,6 +127,8 @@
 		49B9CCBE17CD81900055845B /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				4959515617CEC29100CC072C /* buttonBackground@2x.png */,
+				4959515417CEC26B00CC072C /* buttonBackground.png */,
 				49B9CCBF17CD81B50055845B /* background.png */,
 				49B9CCC017CD81B50055845B /* background@2x.png */,
 				49B9CCC117CD81B50055845B /* button_bg_off.png */,
@@ -195,6 +201,8 @@
 				49B9CCC817CD81B50055845B /* button_bg_off@2x.png in Resources */,
 				49B9CCC917CD81B50055845B /* button_bg_on.png in Resources */,
 				49B9CCCA17CD81B50055845B /* button_bg_on@2x.png in Resources */,
+				4959515517CEC26B00CC072C /* buttonBackground.png in Resources */,
+				4959515717CEC29100CC072C /* buttonBackground@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,6 +338,7 @@
 				49B9CCBD17CD76DA0055845B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

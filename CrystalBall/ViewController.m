@@ -30,13 +30,16 @@
     
     //Create the predictionArray only once
     self.predictionArray = [[NSArray alloc] initWithObjects:@"It is certain",
-                            @"It is decidedly so",@"All signs say YES",
+                            @"It is decidedly so",
+                            @"All signs say YES",
                             @"The stars are not aligned",
                             @"My reply is no",
                             @"It is doubtful",
                             @"Better not tell you now",
                             @"Concentrate and ask again",
                             @"Change your mind",
+                            @"Better don't wake up today",
+                            @"You'll find true love",
                             @"Unable to answer now", nil];
     
     //UIColor Array
@@ -44,8 +47,22 @@
                           [UIColor purpleColor],
                           [UIColor redColor],
                           [UIColor blueColor],
+                          [UIColor greenColor],
+                          [UIColor whiteColor],
+                          [UIColor orangeColor],
+                          [UIColor magentaColor],
                           [UIColor yellowColor], nil];
     
+    //Adding the button programmatically
+    UIImage *buttonOff = [UIImage imageNamed:@"buttonBackground.png"];
+    
+    UIButton *predictButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    predictButton.frame = CGRectMake(80.0, 380.0, 160.0, 80.0);
+    [predictButton setBackgroundImage:buttonOff forState:UIControlStateNormal];
+    [predictButton setTitle:@"Predict" forState:UIControlStateNormal];
+    [predictButton setTitleColor:[UIColor purpleColor] forState:UIControlStateNormal];
+    [predictButton addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchDown];
+    [self.view addSubview:predictButton];        
 }
 
 - (void)didReceiveMemoryWarning
