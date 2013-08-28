@@ -26,4 +26,12 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)buttonPressed:(UIButton *)sender {
+    //Button connected to our view controller and send a message to the log
+    //NSLog(@"button pressed");
+    
+    //Set a new text on the predictionLabel
+    self.predictionLabel.text = @"Definitely Yes";
+    
+}
 @end
