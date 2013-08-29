@@ -14,6 +14,10 @@
 @property (strong, nonatomic) NSArray *predictionArray;
 @property (strong, nonatomic) NSArray *colorMessage;
 
-- (IBAction)buttonPressed:(UIButton *)sender;
+// Button method
+// - (IBAction)buttonPressed:(UIButton *)sender;
+
+//Prediction method
+- (void) makePrediction;
 
 @end
