@@ -13,6 +13,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *predictionLabel;
 @property (strong, nonatomic) NSArray *predictionArray;
 @property (strong, nonatomic) NSArray *colorMessage;
+@property (strong, nonatomic) UIImageView *imageView;
 
 // Button method
 // - (IBAction)buttonPressed:(UIButton *)sender;

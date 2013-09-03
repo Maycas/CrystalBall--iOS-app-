@@ -17,16 +17,44 @@
 @synthesize predictionLabel;
 @synthesize predictionArray;
 @synthesize colorMessage;
+@synthesize imageView;
 
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	
-    //Creating the background image
+    //Creating an animated background image
     UIImage *image = [UIImage imageNamed:@"background.png"];
-    UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
-    [self.view insertSubview:imageView atIndex:0];
+    self.imageView = [[UIImageView alloc] initWithImage:image];
+    [self.view insertSubview:self.imageView atIndex:0];
+    
+    self.imageView.animationImages = [[NSArray alloc] initWithObjects:[UIImage imageNamed:@"cball00001"],
+                                      [UIImage imageNamed:@"cball00002"],
+                                      [UIImage imageNamed:@"cball00004"],
+                                      [UIImage imageNamed:@"cball00004"],
+                                      [UIImage imageNamed:@"cball00005"],
+                                      [UIImage imageNamed:@"cball00006"],
+                                      [UIImage imageNamed:@"cball00007"],
+                                      [UIImage imageNamed:@"cball00008"],
+                                      [UIImage imageNamed:@"cball00009"],
+                                      [UIImage imageNamed:@"cball00010"],
+                                      [UIImage imageNamed:@"cball00011"],
+                                      [UIImage imageNamed:@"cball00012"],
+                                      [UIImage imageNamed:@"cball00013"],
+                                      [UIImage imageNamed:@"cball00014"],
+                                      [UIImage imageNamed:@"cball00015"],
+                                      [UIImage imageNamed:@"cball00016"],
+                                      [UIImage imageNamed:@"cball00017"],
+                                      [UIImage imageNamed:@"cball00018"],
+                                      [UIImage imageNamed:@"cball00019"],
+                                      [UIImage imageNamed:@"cball00020"],
+                                      [UIImage imageNamed:@"cball00021"],
+                                      [UIImage imageNamed:@"cball00022"],
+                                      [UIImage imageNamed:@"cball00023"],
+                                      [UIImage imageNamed:@"cball00024"], nil];
+    self.imageView.animationDuration = 1.0;
+    self.imageView.animationRepeatCount = 1;
     
     //Create the predictionArray only once
     self.predictionArray = [[NSArray alloc] initWithObjects:@"It is certain",
@@ -109,6 +137,13 @@
     //Change color randomly
     NSUInteger colorIndex = arc4random_uniform(self.colorMessage.count);
     self.predictionLabel.textColor = [self.colorMessage objectAtIndex:colorIndex];
+    
+    //Start animating ball and text
+    [self.imageView startAnimating];
+    
+    [UIView animateWithDuration:2.0 animations:^{
+        self.predictionLabel.alpha = 1.0;
+    }];
 }
 
 - (BOOL) canBecomeFirstResponder{
@@ -117,7 +152,9 @@
 
 - (void) motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event {
     //Clear out prediction label when shaking
-    self.predictionLabel.text =@"";
+    self.predictionLabel.text =nil;
+    //Set alpha to 0 for animation
+    self.predictionLabel.alpha = 0.0;
 }
 
 - (void) motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event {
@@ -132,7 +169,10 @@
 }
 
 - (void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    self.predictionLabel.text = @"";
+    //Clear out prediction label when touching
+    self.predictionLabel.text = nil;
+    //Set alpha to 0 for animation
+    self.predictionLabel.alpha = 0.0;
 }
 
 - (void) touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
