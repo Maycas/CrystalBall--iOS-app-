@@ -129,6 +129,7 @@
 } 
 */
 
+
 - (void) makePrediction {
     //Access randomly to the array
     NSUInteger index = arc4random_uniform(self.predictionArray.count);
@@ -144,29 +145,50 @@
     [UIView animateWithDuration:2.0 animations:^{
         self.predictionLabel.alpha = 1.0;
     }];
+    
+    //Animate label movement
+    self.predictionLabel.frame = CGRectMake(40, 260, 239, 96); // move label to lowest part of ball
+    [UIView animateWithDuration:1.0 animations:^{
+        self.predictionLabel.frame = CGRectMake(40, 196, 239, 96); // animate it upwards
+    }];
 }
+
 
 - (BOOL) canBecomeFirstResponder{
     return YES;
 }
 
+
 - (void) motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event {
-    //Clear out prediction label when shaking
-    self.predictionLabel.text =nil;
+    
     //Set alpha to 0 for animation
     self.predictionLabel.alpha = 0.0;
+    
+    if (motion == UIEventSubtypeMotionShake){
+        //Clear out prediction label when shaking
+        self.predictionLabel.text =nil;
+        
+        [UIView animateWithDuration:1.0 animations:^{
+            self.predictionLabel.frame = CGRectMake(20, 100, 239, 96); // animate it downwards
+        }];
+    }
 }
 
 - (void) motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event {
-    if (motion == UIEventSubtypeMotionShake){
-        //When motion ends, display a prediction
-        [self makePrediction];
+    if ( motion == UIEventSubtypeMotionShake ){
+        [UIView animateWithDuration:0.5 animations:^{
+            self.predictionLabel.frame = CGRectMake(40, 100, 239, 96); // animate it upwards
+        } completion:^(BOOL finished) {
+            [self makePrediction];
+        }];
     }
 }
+
 
 - (void) motionCancelled:(UIEventSubtype)motion withEvent:(UIEvent *)event {
     NSLog(@"Motion Cancelled");
 }
+
 
 - (void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     //Clear out prediction label when touching
@@ -174,6 +196,7 @@
     //Set alpha to 0 for animation
     self.predictionLabel.alpha = 0.0;
 }
+
 
 - (void) touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
     //When motion ends, display a prediction
