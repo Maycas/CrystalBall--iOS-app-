@@ -169,7 +169,7 @@
         self.predictionLabel.text =nil;
         
         [UIView animateWithDuration:1.0 animations:^{
-            self.predictionLabel.frame = CGRectMake(20, 100, 239, 96); // animate it downwards
+            self.predictionLabel.frame = CGRectMake(20, 260, 239, 96); // animate it downwards
         }];
     }
 }
@@ -177,7 +177,7 @@
 - (void) motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event {
     if ( motion == UIEventSubtypeMotionShake ){
         [UIView animateWithDuration:0.5 animations:^{
-            self.predictionLabel.frame = CGRectMake(40, 100, 239, 96); // animate it upwards
+            self.predictionLabel.frame = CGRectMake(40, 196, 239, 96); // animate it upwards
         } completion:^(BOOL finished) {
             [self makePrediction];
         }];
