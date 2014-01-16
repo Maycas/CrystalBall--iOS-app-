@@ -68,7 +68,8 @@
                             @"Change your mind",
                             @"Better don't wake up today",
                             @"You'll find true love",
-                            @"Unable to answer now", nil];
+                            @"Unable to answer now",
+                            @"Marcos has told me to say: hi!", nil];
     
     //UIColor Array
     self.colorMessage =[[NSArray alloc] initWithObjects: [UIColor cyanColor],
