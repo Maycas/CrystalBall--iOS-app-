@@ -147,13 +147,13 @@
 		49B9CCA117CD76DA0055845B /* CrystalBall */ = {
 			isa = PBXGroup;
 			children = (
-				49B9CCBE17CD81900055845B /* Images */,
 				49B9CCAA17CD76DA0055845B /* AppDelegate.h */,
 				49B9CCAB17CD76DA0055845B /* AppDelegate.m */,
 				49B9CCB317CD76DA0055845B /* MainStoryboard.storyboard */,
 				49B9CCB617CD76DA0055845B /* ViewController.h */,
 				49B9CCB717CD76DA0055845B /* ViewController.m */,
 				49B9CCA217CD76DA0055845B /* Supporting Files */,
+				49B9CCBE17CD81900055845B /* Images */,
 			);
 			path = CrystalBall;
 			sourceTree = "<group>";
